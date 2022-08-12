@@ -1,0 +1,23 @@
+{
+  "name": "playwright-examples",
+  "version": "1.0.0",
+  "description": "Trying out playwright",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloitsdave/playwright-examples.git"
+  },
+  "keywords": [
+    "playwright"
+  ],
+  "author": "helloitsdave@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helloitsdave/playwright-examples/issues"
+  },
+  "homepage": "https://github.com/helloitsdave/playwright-examples#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.25.0"
+  }
+}
