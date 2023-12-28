@@ -1,11 +1,12 @@
 {
   "name": "playwright-examples",
   "version": "1.0.0",
-  "description": "Trying out playwright",
+  "description": "Playwright with eslint and github actions",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "lint:ci": "eslint . --ext .ts --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif"
   },
   "repository": {
     "type": "git",
@@ -21,17 +22,18 @@
   },
   "homepage": "https://github.com/helloitsdave/playwright-examples#readme",
   "devDependencies": {
+    "@microsoft/eslint-formatter-sarif": "2.1.7",
     "@playwright/test": "1.40.0",
-    "@types/node": "^20.10.5",
-    "@typescript-eslint/eslint-plugin": "^6.16.0",
-    "@typescript-eslint/parser": "^6.16.0",
-    "eslint": "^8.56.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-playwright": "^0.20.0",
-    "eslint-plugin-prettier": "^5.1.2",
-    "prettier": "^3.1.1",
-    "typescript": "^5.3.3"
+    "@types/node": "20.10.5",
+    "@typescript-eslint/eslint-plugin": "6.16.0",
+    "@typescript-eslint/parser": "6.16.0",
+    "eslint": "8.56.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-playwright": "0.20.0",
+    "eslint-plugin-prettier": "5.1.2",
+    "prettier": "3.1.1",
+    "typescript": "5.3.3"
   }
 }
