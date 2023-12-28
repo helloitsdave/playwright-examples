@@ -4,9 +4,12 @@
   "description": "Playwright with eslint and github actions",
   "main": "index.js",
   "scripts": {
+    "tests:ui": "playwright test ./ui --browser all",
+    "tests:api": "playwright test ./api",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "lint:ci": "eslint . --ext .ts --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif"
+    "lint:ci": "eslint . --ext .ts --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif",
+    "report" : "playwright show-report"
   },
   "repository": {
     "type": "git",
