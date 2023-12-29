@@ -1,10 +1,14 @@
 # playwright-examples
 
-Playwright.io Typescript Framework with
+[![Playwright Tests](https://github.com/helloitsdave/playwright-examples/actions/workflows/playwright.yml/badge.svg)](https://github.com/helloitsdave/playwright-examples/actions/workflows/playwright.yml)
+[![ESLint](https://github.com/helloitsdave/playwright-examples/actions/workflows/eslint.yml/badge.svg)](https://github.com/helloitsdave/playwright-examples/actions/workflows/eslint.yml)
+[![CodeQL](https://github.com/helloitsdave/playwright-examples/actions/workflows/codeql.yml/badge.svg)](https://github.com/helloitsdave/playwright-examples/actions/workflows/codeql.yml)
 
-- Examples of basic playwright tests
+Playwright.io Typescript Framework including
+
+- Examples of basic playwright tests for UI and API
 - eslint configuration
-- Github Actions for linting, tests and CodeQL
+- Github Actions for linting, test execution and CodeQL analysis
 
 ## Installation
 
