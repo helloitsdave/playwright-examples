@@ -1,43 +1,45 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 
-const baseURL = "https://petstore.swagger.io/v2/pet";
+const baseURL = 'https://petstore.swagger.io/v2/pet';
 
-test.describe("Petstore API", () => {
-  test("Find Pets by status", async ({ request }) => {
+test.describe('Petstore Rest API', () => {
+  test('Find Pets by status', async ({ request }) => {
     // Call the API
     const response = await request.get(
       `${baseURL}/findByStatus?status=available`
     );
-    //
+    // Expect the response to be 200
     expect(response.status()).toBe(200);
     // Store the response JSON
     const json = await response.json();
     expect(json.length).toBeGreaterThan(0);
 
-    const properties = ["id", "name", "status", "tags"];
+    await test.step('Verify the response has the expected properties', () => {
+      const properties = ['id', 'name', 'status', 'tags'];
 
-    properties.forEach((property) => {
-      expect(json[0]).toHaveProperty(property);
+      properties.forEach((property) => {
+        expect(json[0]).toHaveProperty(property);
+      });
     });
   });
 
-  test("Create a new pet", async ({ request }) => {
+  test('Create a new pet', async ({ request }) => {
     // Input Data
     const data = {
       id: 123,
       category: {
         id: 123,
-        name: "Cat",
+        name: 'Cat',
       },
-      name: "Jinx",
-      photoUrls: ["string"],
+      name: 'Jinx',
+      photoUrls: ['string'],
       tags: [
         {
           id: 123,
-          name: "what tag?",
+          name: 'what tag?',
         },
       ],
-      status: "available",
+      status: 'available',
     };
 
     // Call the API to Create a new pet with the data

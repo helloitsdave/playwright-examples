@@ -6,7 +6,9 @@
 
 Playwright.io Typescript Framework including
 
-- Examples of basic playwright tests for UI and API
+- Basic UI test against [https://playwright.dev/](https://playwright.dev/)
+- GraphQL API example against [https://api.github.com/graphql](https://api.github.com/graphql)
+- Rest API example against [https://petstore.swagger.io/v2/pet](https://petstore.swagger.io/v2/pet)
 - eslint configuration
 - Github Actions for linting, test execution and CodeQL analysis
 
