@@ -9,6 +9,8 @@ jobs:
   test:
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    env:
+      PW_GIT_AUTH: ${{ secrets.PW_GIT_AUTH }}
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
