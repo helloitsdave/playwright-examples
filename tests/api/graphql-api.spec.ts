@@ -31,7 +31,7 @@ test.describe('Github GraphQL API', () => {
       },
     });
 
-    // Expect the response to be 200 and not contain any errors
+    // Expect the response to be 401 response status which is unauthorized
     expect(response.status()).toBe(401);
 
     // Store the response JSON
